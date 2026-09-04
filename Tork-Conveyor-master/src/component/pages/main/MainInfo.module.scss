@@ -1,0 +1,139 @@
+.MainInfo {
+  padding-block: 50px;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    .texts {
+      color: white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      h1 {
+        font-size: clamp(1.563rem, 1.256rem + 1.53vw, 2.5rem);
+        text-align: center;
+      }
+      .hr {
+        width: 120px;
+        height: 3px;
+        background: white;
+      }
+      ul {
+        margin-left: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        li {
+          font-weight: 400;
+          font-size: clamp(0.938rem, 0.835rem + 0.51vw, 1.25rem);
+          width: 80%;
+        }
+      }
+    }
+    .infoAllBlocks {
+      .infoBlocks {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+        gap: 20px;
+        .infoBlock {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          .text {
+            color: white;
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+            h3 {
+              font-size: clamp(1.125rem, 0.982rem + 0.71vw, 1.563rem);
+            }
+            ul {
+              margin-left: 20px;
+              li {
+                font-size: clamp(0.938rem, 0.835rem + 0.51vw, 1.25rem);
+              }
+            }
+          }
+          img {
+            width: 250px;
+            height: 300px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .MainInfo .content .infoAllBlocks {
+    flex-direction: column;
+    gap: 40px;
+    .infoBlocks {
+      .infoBlock {
+        flex-direction: column-reverse;
+        img {
+          width: 300px;
+          height: 200px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .MainInfo .content {
+    .texts {
+      ul {
+        width: 100%;
+      }
+    }
+    .infoAllBlocks .infoBlocks {
+      gap: 40px;
+      .infoBlock {
+        align-items: start;
+        .text {
+          h3 {
+            width: 90%;
+          }
+        }
+        img {
+          width: 250px;
+          height: 150px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .MainInfo .content .infoAllBlocks .infoBlocks {
+    flex-direction: column;
+    .infoBlock .text {
+      h3 {
+        width: 100%;
+      }
+      ul li {
+        width: 80%;
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  .MainInfo {
+    padding-block: 20px;
+    .content .infoAllBlocks .infoBlocks {
+      flex-direction: column;
+      .infoBlock {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+  }
+}

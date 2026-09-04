@@ -1,0 +1,119 @@
+.AboutMain {
+  padding: 100px 0 100px 0;
+
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    text-align: center;
+
+    h1 {
+      font-size: clamp(1.563rem, 1.222rem + 1.7vw, 2.5rem);
+      color: white;
+    }
+    .hr {
+      width: 120px;
+      height: 3px;
+      background: white;
+    }
+    h6 {
+      font-size: clamp(0.813rem, 0.699rem + 0.57vw, 1.125rem);
+      font-weight: 400;
+      color: white;
+      width: 80%;
+      text-align: center;
+    }
+    .aboutContent {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 50px;
+      .aboutStory {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 10px;
+        width: 50%;
+        h2 {
+          font-size: clamp(1.25rem, 1.023rem + 1.14vw, 1.875rem);
+          color: white;
+        }
+        .description {
+          display: flex;
+          align-items: start;
+          flex-direction: column;
+          gap: 20px;
+          width: 100%;
+          .group {
+            display: flex;
+            align-items: start;
+            gap: 20px;
+            width: 100%;
+            h3 {
+              color: white;
+              font-size: clamp(0.938rem, 0.824rem + 0.57vw, 1.25rem);
+            }
+            p {
+              span {
+                font-weight: 500;
+              }
+              font-size: clamp(0.813rem, 0.699rem + 0.57vw, 1.125rem);
+              font-weight: 300;
+              color: white;
+              text-align: start;
+              width: 100%;
+            }
+          }
+        }
+      }
+      img {
+        width: 600px;
+        height: 450px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .AboutMain {
+    .content {
+      .aboutContent {
+        flex-direction: column;
+        gap: 40px;
+        .aboutStory {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .AboutMain {
+    .content {
+      h6 {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .AboutMain {
+    .content {
+      .aboutContent {
+        img {
+          height: 300px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
